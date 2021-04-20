@@ -1,0 +1,27 @@
+name: terraform-ecs-envoy
+gitlab_repo: miquido/terraform/terraform-ecs-envoy
+badges: []
+related: []
+description: |-
+  Provide app mesh envoy container definition for ECS
+
+usage: |-
+  ```hcl
+    module "ecs-alb-task-service-envoy-proxy" {
+      source                            = "git::ssh://git@gitlab.com/miquido/terraform/terraform-ecs-envoy.git"
+      appmesh-resource-arn              = ...
+      awslogs-group                     = ...
+      awslogs-region                    = ...
+      app-ports                         = ...
+      egress-ignored-ports              = ...
+      container_name                    = ...
+      aws_service_discovery_service_arn = ...
+  }
+  ```
+
+include:
+  - "docs/targets.md"
+  - "docs/terraform.md"
+contributors:
+  - name: "Marek Mościchowski"
+    github: "marekmoscichowski"
