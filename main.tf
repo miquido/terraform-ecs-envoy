@@ -1,6 +1,6 @@
 locals {
   appmesh_envoy_container_name  = "envoy"
-  appmesh_envoy_container_image = "public.ecr.aws/appmesh/aws-appmesh-envoy:v1.16.1.1-prod"
+  appmesh_envoy_container_image = "public.ecr.aws/appmesh/aws-appmesh-envoy:v1.17.2.0-prod"
 }
 
 module "ecs-proxy-container-definition" {
