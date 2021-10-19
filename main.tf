@@ -8,7 +8,7 @@ module "ecs-proxy-container-definition" {
 
   container_image  = local.appmesh_envoy_container_image
   container_name   = local.appmesh_envoy_container_name
-  container_memory = 512
+  container_memory = var.container_memory
   essential        = "true"
   user             = 1337
 
