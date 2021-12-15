@@ -11,7 +11,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ecs-proxy-container-definition"></a> [ecs-proxy-container-definition](#module\_ecs-proxy-container-definition) | git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=tags/0.46.2 |  |
+| <a name="module_ecs-proxy-container-definition"></a> [ecs-proxy-container-definition](#module\_ecs-proxy-container-definition) | git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git | 0.58.1 |
 
 ## Resources
 
@@ -26,8 +26,10 @@ No resources.
 | <a name="input_aws_service_discovery_service_arn"></a> [aws\_service\_discovery\_service\_arn](#input\_aws\_service\_discovery\_service\_arn) | arn of service discovery service | `string` | n/a | yes |
 | <a name="input_awslogs-group"></a> [awslogs-group](#input\_awslogs-group) | group of CloudWatch logs | `string` | n/a | yes |
 | <a name="input_awslogs-region"></a> [awslogs-region](#input\_awslogs-region) | region of CloudWatch logs | `string` | n/a | yes |
+| <a name="input_container_memory"></a> [container\_memory](#input\_container\_memory) | The amount of memory (in MiB) to allow the container to use. This is a hard limit, if the container attempts to exceed the container\_memory, the container is killed. This field is optional for Fargate launch type and the total amount of container\_memory of all containers in a task will need to be lower than the task memory value | `number` | `null` | no |
 | <a name="input_container_name"></a> [container\_name](#input\_container\_name) | Cloud map container name | `string` | n/a | yes |
 | <a name="input_egress-ignored-ports"></a> [egress-ignored-ports](#input\_egress-ignored-ports) | Coma separated egress ignored ports | `string` | n/a | yes |
+| <a name="input_ulimits"></a> [ulimits](#input\_ulimits) | Container ulimit settings. This is a list of maps, where each map should contain "name", "hardLimit" and "softLimit" | <pre>list(object({<br>    name      = string<br>    hardLimit = number<br>    softLimit = number<br>  }))</pre> | `null` | no |
 
 ## Outputs
 
