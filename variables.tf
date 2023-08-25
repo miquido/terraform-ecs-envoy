@@ -51,8 +51,8 @@ variable "ulimits" {
   default     = null
 }
 
-variable health_check_start_period {
-  type = number
+variable "health_check_start_period" {
+  type        = number
   description = "when to start performing healthchecks"
-  default = 10
+  default     = 10
 }
