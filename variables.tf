@@ -50,3 +50,9 @@ variable "ulimits" {
   description = "Container ulimit settings. This is a list of maps, where each map should contain \"name\", \"hardLimit\" and \"softLimit\""
   default     = null
 }
+
+variable health_check_start_period {
+  type = number
+  description = "when to start performing healthchecks"
+  default = 10
+}

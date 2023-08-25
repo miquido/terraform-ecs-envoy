@@ -24,7 +24,7 @@ module "ecs-proxy-container-definition" {
     command     = ["CMD-SHELL", "curl -s http://localhost:9901/server_info | grep state | grep -q LIVE"]
     interval    = 5
     retries     = 3
-    startPeriod = 10
+    startPeriod = var.health_check_start_period
     timeout     = 2
   }
 
