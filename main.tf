@@ -4,7 +4,7 @@ locals {
 }
 
 module "ecs-proxy-container-definition" {
-  source = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=0.58.1"
+  source = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=0.60.1"
 
   container_image  = local.appmesh_envoy_container_image
   container_name   = local.appmesh_envoy_container_name
